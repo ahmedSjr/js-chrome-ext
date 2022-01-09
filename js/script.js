@@ -34,5 +34,29 @@ function showTime() {
 function addZero(num) {
   return (parseInt(num, 10) < 10 ? "0" : "") + num;
 }
+
+//Background changer / Greeting
+
+function backGee() {
+  let today = new Date(),
+    hour = today.getHours();
+
+  if (hour < 12) {
+    //Morning
+    document.body.style.backgroundImage = "url('../img/mor.jpg')";
+    greeting.textContent = "Good Morning";
+  } else if (hour < 18) {
+    //Afternoon
+    document.body.style.backgroundImage = "url('../img/after.jpg')";
+    greeting.textContent = "Good Afternoon";
+  } else {
+    //Evening
+    document.body.style.backgroundImage = "url('../img/nig.jpg')";
+    greeting.textContent = "Good Night";
+    document.body.style.color = "white";
+  }
+}
+
 //Run the time
 showTime();
+backGee();
