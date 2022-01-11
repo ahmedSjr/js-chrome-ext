@@ -41,7 +41,7 @@ function addZero(num) {
 //Background changer / Greeting
 
 function backGee() {
-  let today = new Date(),
+  let today = new Date(2019, 2, 13, 9),
     hour = today.getHours();
 
   if (hour < 12) {
